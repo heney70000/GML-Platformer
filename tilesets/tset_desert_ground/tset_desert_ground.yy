@@ -1,14 +1,10 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "tset_sand_ground",
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
+  "name": "tset_desert_ground",
   "spriteId": {
-    "name": "spr_sand_ground",
-    "path": "sprites/spr_sand_ground/spr_sand_ground.yy",
+    "name": "spr_desert_ground",
+    "path": "sprites/spr_desert_ground/spr_desert_ground.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -16,9 +12,13 @@
   "tileyoff": 0,
   "tilehsep": 0,
   "tilevsep": 0,
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
-  "spriteNoExport": true,
   "out_columns": 55,
   "tile_count": 3072,
   "autoTileSets": [],
