@@ -42,13 +42,23 @@ y = y + vsp;
 
 
 //Animation
-if (!place_meeting(x,y+vsp,obj_invisible_wall))
+if (!place_meeting(x,y+1,obj_invisible_wall))
 {
 	sprite_index = spr_cowegg_jump;
 	image_speed = 0;
 	if (vsp < 0) image_index = 1; else image_index = 3;
 }
-	
-	
-	
-	
+else
+{
+	image_speed = 1;
+	if (hsp == 0)
+	{
+		sprite_index = spr_cowegg_idle;
+	}
+	else
+	{
+		sprite_index = spr_cowegg_run;
+	}
+}
+
+if (hsp != 0) image_xscale = 2*(sign(hsp));	
