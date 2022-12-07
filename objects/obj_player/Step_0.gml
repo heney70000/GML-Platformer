@@ -62,3 +62,19 @@ else
 }
 
 if (hsp != 0) image_xscale = 2*(sign(hsp));	
+
+//Change Rooms
+if (x > room_width) and (room_exists(room_next(room)))
+{
+	room_goto_next();
+	room_instance_add(room_next(room), 32, y, obj_player);
+	instance_destroy();
+}
+
+if (x < 0) and (room_exists(room_previous(room)))
+{
+	room_goto_previous();
+	room_instance_add(room_next(room), 32, y, obj_player);
+	instance_destroy();
+}
+
