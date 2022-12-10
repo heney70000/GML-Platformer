@@ -1,10 +1,10 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "TileSet2",
+  "name": "tset_desert_foreground",
   "spriteId": {
-    "name": "spr_desert_backdrop",
-    "path": "sprites/spr_desert_backdrop/spr_desert_backdrop.yy",
+    "name": "spr_desert_ground",
+    "path": "sprites/spr_desert_ground/spr_desert_ground.yy",
   },
   "tileWidth": 128,
   "tileHeight": 128,

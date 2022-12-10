@@ -8,3 +8,5 @@ jumpsp = 9;
 
 image_xscale = 2;
 image_yscale = 2;
+
+key_down = 0;

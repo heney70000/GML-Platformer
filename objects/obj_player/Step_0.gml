@@ -5,7 +5,7 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
-key_down = keyboard_check_pressed(vk_down);
+key_down = keyboard_check(vk_down);
 
 //Calculate movement
 var _move = key_right - key_left;
@@ -41,18 +41,6 @@ if (place_meeting(x,y+vsp,obj_invisible_wall))
 	vsp = 0;
 }
 
-//Vertical Collision (Platforms)
-if !key_down
-{
-	if (place_meeting(x,y+vsp,obj_passthrough_platform))
-	{
-		while (!place_meeting(x,y+sign(vsp),obj_passthrough_platform))
-		{
-			y = y + sign(vsp);
-		}
-		vsp = 0;
-	}
-}
 y = y + vsp;
 
 //Animation
