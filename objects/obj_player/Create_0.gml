@@ -6,6 +6,9 @@ grv = 0.3;
 walksp = 4;
 jumpsp = 9;
 death = 0;
+stopMovement = 1;
+attacking = false;
+falling = false;
 
 image_xscale = 2;
 image_yscale = 2;

@@ -5,11 +5,12 @@ key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_down = keyboard_check(vk_down);
+key_attack = keyboard_check(ord("E"));
 
 //Calculate movement
 var _move = key_right - key_left;
 
-hsp = _move * walksp;
+hsp = _move * walksp * stopMovement;
 
 vsp = vsp + grv;
 
@@ -41,6 +42,11 @@ if (place_meeting(x,y+vsp,obj_invisible_wall))
 		y = y + sign(vsp);
 	}
 	vsp = 0;
+	falling = false;
+}
+else
+{
+	falling = true;
 }
 
 if (death != 1)
@@ -60,13 +66,6 @@ if y > room_height
 }
 
 //Death
-if (death == 1)
-{
-	hsp = 0;
-	vsp = 0;
-	sprite_index = spr_cowegg_death;
-}
-
 if (death == 1) && keyboard_check_pressed(ord("R"))
 {
 	game_restart();
@@ -80,24 +79,55 @@ if death != 0
 //Animation
 if (death != 1)
 {
-	if (!place_meeting(x,y+1,obj_invisible_wall))
+	if !attacking
 	{
-		sprite_index = spr_cowegg_jump;
-		image_speed = 0;
-		if (vsp < 0) image_index = 1; else image_index = 3;
-	}
-	else
-	{
-		image_speed = 1;
-		if (hsp == 0)
+		if (!place_meeting(x,y+1,obj_invisible_wall))
 		{
-			sprite_index = spr_cowegg_idle;
+			sprite_index = spr_cowegg_jump;
+			image_speed = 0;
+			if (vsp < 0) image_index = 1; else image_index = 3;
 		}
 		else
 		{
-			sprite_index = spr_cowegg_run;
+			image_speed = 1;
+			if (hsp == 0)
+			{
+				sprite_index = spr_cowegg_idle;
+			}
+			else
+			{
+				sprite_index = spr_cowegg_run;
+			}
 		}
 	}
 }
+else
+{
+	hsp = 0;
+	vsp = 0;
+	sprite_index = spr_cowegg_death;
+}
 
 if (hsp != 0) image_xscale = 2*(sign(hsp));	
+
+//Punch Attack
+if key_attack and !attacking and !falling
+{
+	sprite_index = spr_cowegg_punch_windup;
+}
+
+if (sprite_index = spr_cowegg_punch_windup) or (sprite_index = spr_cowegg_punch)
+{
+	stopMovement = 0;
+}
+else
+{
+	stopMovement = 1;
+}
+
+if keyboard_check_released(ord("E")) and !attacking and !falling
+{
+	instance_destroy(collision_rectangle(x+(image_xscale*13), y-sprite_height/4 * image_yscale, x+(image_xscale*44), y+sprite_height/2, obj_destroyable, false, true))
+	sprite_index = spr_cowegg_punch;
+	attacking = true;
+}
