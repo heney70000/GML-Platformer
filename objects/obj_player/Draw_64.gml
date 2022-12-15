@@ -1,5 +1,10 @@
+draw_set_halign(fa_left);
+draw_text(10, 10, "Score: " + string(global.score));
+draw_text(10, 42, "Time: " + string(global.time));
+
 if (death == 1)
 {
+	draw_set_halign(fa_center);
 	draw_text(room_width/2, 64, "Oops...\nPress 'R' to restart");
 }
 
