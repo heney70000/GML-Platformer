@@ -1,0 +1,1 @@
+global.score += 200;

@@ -128,6 +128,7 @@ else
 if keyboard_check_released(ord("E")) and !attacking and !falling
 {
 	instance_destroy(collision_rectangle(x+(image_xscale*13), y-sprite_height/4 * image_yscale, x+(image_xscale*44), y+sprite_height/2, obj_destroyable, false, true))
+	instance_destroy(collision_rectangle(x+(image_xscale*13), y-sprite_height/4 * image_yscale, x+(image_xscale*44), y+sprite_height/2, obj_enemy, false, true))
 	sprite_index = spr_cowegg_punch;
 	attacking = true;
 }

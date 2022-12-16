@@ -5,6 +5,6 @@ spawn_data =
 {
 	spawn_direction : spawn_direction,
 };
-alarm[0] = room_speed * spawning_frequency;
+alarm[0] = room_speed * 1;
 
 
