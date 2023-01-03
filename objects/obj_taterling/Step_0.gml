@@ -1,5 +1,6 @@
 vsp = vsp + grv;
 
+//Change direction when running into a wall
 if (place_meeting(x+hsp,y,obj_invisible_wall))
 {
 	while (!place_meeting(x+sign(hsp),y,obj_invisible_wall))

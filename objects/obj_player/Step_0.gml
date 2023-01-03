@@ -105,7 +105,10 @@ else
 {
 	hsp = 0;
 	vsp = 0;
-	sprite_index = spr_cowegg_death;
+	if finish = false
+	{
+		sprite_index = spr_cowegg_death;
+	}
 }
 
 if (hsp != 0) image_xscale = 2*(sign(hsp));	

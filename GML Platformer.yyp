@@ -38,6 +38,7 @@
     {"id":{"name":"tset_platforms","path":"tilesets/tset_platforms/tset_platforms.yy",},"order":2,},
     {"id":{"name":"spr_cowegg_jump","path":"sprites/spr_cowegg_jump/spr_cowegg_jump.yy",},"order":2,},
     {"id":{"name":"spr_taterling","path":"sprites/spr_taterling/spr_taterling.yy",},"order":28,},
+    {"id":{"name":"obj_finish","path":"objects/obj_finish/obj_finish.yy",},"order":15,},
     {"id":{"name":"spr_cowegg_death","path":"sprites/spr_cowegg_death/spr_cowegg_death.yy",},"order":0,},
     {"id":{"name":"spr_platforms","path":"sprites/spr_platforms/spr_platforms.yy",},"order":11,},
     {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},"order":12,},
@@ -48,7 +49,7 @@
     {"id":{"name":"rm_3","path":"rooms/rm_3/rm_3.yy",},"order":1,},
     {"id":{"name":"obj_rolling_boulder","path":"objects/obj_rolling_boulder/obj_rolling_boulder.yy",},"order":11,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":5,},
-    {"id":{"name":"spr_start","path":"sprites/spr_start/spr_start.yy",},"order":12,},
+    {"id":{"name":"spr_finish","path":"sprites/spr_finish/spr_finish.yy",},"order":12,},
     {"id":{"name":"obj_gem","path":"objects/obj_gem/obj_gem.yy",},"order":10,},
     {"id":{"name":"spr_spawner","path":"sprites/spr_spawner/spr_spawner.yy",},"order":26,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":29,},
@@ -106,6 +107,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.11.0.54",
+    "IDEVersion": "2022.9.1.51",
   },
 }

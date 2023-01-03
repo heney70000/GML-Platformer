@@ -9,6 +9,7 @@ death = 0;
 stopMovement = 1;
 attacking = false;
 falling = false;
+finish = false;
 
 image_xscale = 2;
 image_yscale = 2;

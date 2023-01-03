@@ -1,4 +1,4 @@
-//@desc Movement
+///@desc Movement
 x += movesp * -spawn_direction;
 
 image_angle += (movesp * spawn_direction)/2;
